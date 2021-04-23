@@ -1,0 +1,135 @@
+body {
+    font-family: 'Antonio', sans-serif;
+    background: #6E4958;
+    background: linear-gradient(60deg, hsla(336, 20%, 20%, 1) 0%, hsla(336, 20%, 48%, 1) 100%);
+    background: -moz-linear-gradient(60deg, hsla(336, 20%, 20%, 1) 0%, hsla(336, 20%, 48%, 1) 100%);
+    background: -webkit-linear-gradient(60deg, hsla(336, 20%, 20%, 1) 0%, hsla(336, 20%, 48%, 1) 100%);
+}
+
+#list-grid {
+    background-color: #FDFDFF;
+    position: absolute;
+    width: 350px;
+    height: max-content;
+    margin: auto;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #62929E;
+    color: #FDFDFF;
+    width: 98%;
+    padding: 5% 1%;
+    text-align: center;
+}
+
+/* Remove margins and padding from the list */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Style the list items */
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #FDFDFF;
+    font-size: 18px;
+    font-family: 'Mail', cursive;
+    transition: 0.2s;
+    color: #272838;
+  
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+    background: #EDEDE9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+    background: #DADAD2;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+    background: #546A7B;
+    color: #DADAD2;
+    text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #DADAD2;
+    border-style: solid;
+    border-width: 0 3px 3px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 14px;
+    width: 7px;
+}
+
+/* Style the close button */
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+                
+.close:hover {
+    background-color: #546A7B;
+    color: #DADAD2;
+}
+
+/* Style the input */
+
+#new-task {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    float: left;
+    font-size: 16px;
+    padding: 10px;
+    width: 75%;
+    height: 25px;
+}
+#new-task::placeholder {
+    font-family: 'Mail', cursive;
+    color: #C8C8BC;
+}
+
+/* Style the "Add" button */
+#add-new-task {
+    all: unset;
+    width: 13.3%;
+    height: 25px;
+    padding: 10px;
+    background: #C6A9B6;
+    color: #272838;
+    float: right;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+#add-new-task:hover {
+    background-color: #B691A1;
+}
