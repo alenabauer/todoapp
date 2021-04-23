@@ -7,7 +7,7 @@ function storeData() {
 var storedTasks = JSON.parse(localStorage.getItem("tasks"));
 
 window.onload = function() {
-    if (storedTasks.length == 0 || storedTasks == NULL) {
+    if (storedTasks.length == 0 || storedTasks == NULL || storedTasks.length == NULL) {
         var li = document.createElement("li");
         li.innerHTML = "No tasks yet";
         document.getElementById("my-list").appendChild(li);
