@@ -11,6 +11,10 @@ window.onload = function() {
         var li = document.createElement("li");
         li.innerHTML = "No tasks yet";
         document.getElementById("my-list").appendChild(li);
+    } else if (storedTasks.length == 0) {
+        var li = document.createElement("li");
+        li.innerHTML = "No tasks yet";
+        document.getElementById("my-list").appendChild(li);
     } else {
         for (var i = 0; i < storedTasks.length; i++) {
             var li = document.createElement("li");
